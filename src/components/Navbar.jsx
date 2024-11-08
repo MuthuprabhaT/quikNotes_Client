@@ -33,7 +33,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
       dispatch(signOutStart());
 
       const res = await axios.get(
-        "https://quiknote-server.onrender.com/api/auth/signout",
+        "https://quiknotes-server.onrender.com/api/auth/signout",
         {
           withCredentials: true,
         }

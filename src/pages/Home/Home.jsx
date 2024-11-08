@@ -42,7 +42,7 @@ const Home = () => {
   const getAllNotes = async () => {
     try {
       const res = await axios.get(
-        "https://quiknote-server.onrender.com/api/note/allNotes",
+        "https://quiknotes-server.onrender.com/api/note/allNotes",
         {
           withCredentials: true,
         }
@@ -69,7 +69,7 @@ const Home = () => {
 
     try {
       const res = await axios.delete(
-        `https://quiknote-server.onrender.com/api/note/delete/${noteId}`,
+        `https://quiknotes-server.onrender.com/api/note/delete/${noteId}`,
         { withCredentials: true }
       );
 
@@ -88,7 +88,7 @@ const Home = () => {
   const onSearchNote = async (query) => {
     try {
       const res = await axios.get(
-        "https://quiknote-server.onrender.com/api/note/search",
+        "https://quiknotes-server.onrender.com/api/note/search",
         {
           params: { query },
           withCredentials: true,
@@ -117,7 +117,7 @@ const Home = () => {
 
     try {
       const res = await axios.put(
-        `https://quiknote-server.onrender.com/api/note//editNotePin/${noteId}`,
+        `https://quiknotes-server.onrender.com/api/note//editNotePin/${noteId}`,
         { isPinned: !noteData.isPinned },
         { withCredentials: true }
       );

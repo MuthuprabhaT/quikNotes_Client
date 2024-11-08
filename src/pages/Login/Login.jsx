@@ -39,7 +39,7 @@ const Login = () => {
       dispatch(signInStart());
 
       const res = await axios.post(
-        "https://quiknote-server.onrender.com/api/auth/signin",
+        "https://quiknotes-server.onrender.com/api/auth/signin",
 
         { email, password },
         { withCredentials: true }
